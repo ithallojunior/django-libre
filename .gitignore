@@ -11,5 +11,8 @@ Thumbs.db
 #python
 *.pyc
 
+# virtualenv
+p3/
+
 #migrations
-./control/migrations/*
+control/migrations/
