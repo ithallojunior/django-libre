@@ -1,0 +1,15 @@
+#OS X
+.DS_Store
+*.pages
+
+#Windows
+Thumbs.db
+
+#vim
+*.swp
+
+#python
+*.pyc
+
+#migrations
+./control/migrations/*
