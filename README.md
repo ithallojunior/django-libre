@@ -77,7 +77,6 @@ From inside this project folder (same as previous) and with the virtualenv activ
 type in your terminal (assuming you did everything as said previously):
 
 ```console
-(p3) $ cd store
 (p3) $ python manage.py makemigrations
 (p3) $ python manage.py migrate
 ```
@@ -108,7 +107,6 @@ your terminal on the folder of this repository and run:
 
 ```console
 $ source p3/bin/activate
-(p3) $ cd store
 (p3) $ python manage.py runserver
 ```
 Now head out to your browser and  go to http://localhost:8000/ to use it.
