@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        {% if products %}
+
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Valor unitário</th>
+                    <th>Quantidade diponível</th>
+                    <th>Situação do Produto</th>
+                    <th>Fazer pedido</th>
+                    <th>Ação</th>
+                </tr>
+                {% for product in products %}
+                    <tr>
+                        <td>{{ product.name}}</td>
+                        <td>{{product.price}} </td>
+                        <td>{{product.qtd}} </td>
+                        <td> {% if product.qtd > 0  %} Disponível {% else %} Indisponível {% endif %} </td>
+                        <td>
+                            {% if product.qtd > 0 %}
+                                <a href="{% url 'create_orders' product.id %}"> Fazer pedido</a>
+                            {% else %}
+                                Fazer pedido
+                            {% endif %}
+                        </td>
+                        <td> <a href="{% url 'update_products' product.id %}"> Editar/Apagar<td>
+                    </tr>
+                {% endfor %}
+
+            </table>
+            </a>
+
+    {% else %}
+        <h1>
+            Não há produtos ainda.
+        </h1>
+    {% endif %}
+
+    <a href="{% url 'create_products' %}">Adicionar produto</a>
+    <br>
+    <a href="{% url 'list_orders' %}">Ver pedidos</a>
+{% endblock %}

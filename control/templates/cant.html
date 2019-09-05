@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2> Não foi possível completar sua requisição :/ . Motivo:</h2>
+    <br>
+    <h3>{{reasons}}</h3>
+    <br>
+    <a href="{% url 'list_products' %}">Mostrar todos os produtos</a>
+    <br>
+    <a href="{% url 'list_orders' %}">Mostrar todos os pedidoss</a>
+{% endblock %}

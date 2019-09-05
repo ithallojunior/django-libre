@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {%if to_show %}
+        <table>
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Valor unitário</th>
+                <th>Data do pedido</th>
+                <th>Solicitante</th>
+                <th>Endereço do solicitante</th>
+                <th>Despachante</th>
+                <th>Situação do pedido</th>
+                <th>Ação</th>
+            </tr>
+            {% for order, product in products %}
+                <tr>
+                    <td>{{product.name}} </td>
+                    <td>{{order.qtd}} </td>
+                    <td>{{product.price}} </td>
+                    <td>{{order.date}} </td>
+                    <td>{{order.client}} </td>
+                    <td>{{order.address}} </td>
+                    <td>{{order.sender}} </td>
+                    <td>{{order.status}} </td>
+
+                    <td> <a href="{% url 'update_orders' order.id %}"> Editar/Apagar<td>
+                </tr>
+            {% endfor %}
+
+        </table>
+        </a>
+
+    {% else %}
+                <h1>
+                        Não há pedidos ainda.
+                </h1>
+            {% endif %}
+
+    <a href="{% url 'list_products' %}">Ver produtos</a>
+{% endblock %}

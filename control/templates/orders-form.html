@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Adicionar/atualizar/apagar pedidos</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Salvar</button>
+    </form>
+
+    {% if order %}
+        <br>
+        <a href="{% url 'delete_orders' order.id %}">Apagar</a>
+    {% endif %}
+    <br>
+    <a href="{% url 'list_products' %}">Ver todos os produtos</a>
+    <br>
+    <a href="{% url 'list_orders' %}">Ver todas os pedidos</a>
+{% endblock %}
