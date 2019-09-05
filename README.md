@@ -26,11 +26,10 @@ probably analogous for Windows systems.
 
 ### PostgreSQL setup
 
-If you PostgreSQL already installed, head out to
-https://www.postgresql.org
-and download it.
+If you don't have PostgreSQL already installed, head out to
+https://www.postgresql.org, download, and install it.
 
-After installing, open your database command line (tip)and create
+After installing, open your database command line and create
 the needed database named **store** with a user **postgres** 
 (you can leave your own user and choose any name to the database, 
 but you will need to change it on the Django afterwards). So:
