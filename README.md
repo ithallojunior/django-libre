@@ -6,7 +6,7 @@ PostgreSQL relational database.
 
 This example contains a server made to run locally. 
 It shows initially whether there are available products 
-(**Produtos**) or not, and after the additions of products it
+(**"Produtos"**) or not, and after the additions of products it
 allows the user to make an order. 
 
 The user is allowed to create,  read, update, and delete both
@@ -53,7 +53,7 @@ You can see if it was create by using the command **\list**, but it is pretty mu
  
  After that you head out to the folder of this repository on your computer and 
  will create the virtual environment (here named p3), it must be a Python3 
- (>=3.6). Afterwards, the virtualenv will be activated (** source p3/bin/activate **) 
+ (>=3.6). Afterwards, the virtualenv will be activated (**source p3/bin/activate**) 
  and  the dependencies  will be installed as well, so the next commands should do.
  
  ```console
