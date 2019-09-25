@@ -39,7 +39,7 @@ $ psql
 # CREATE DATABASE store WITH OWNER=postgres;
 ```
 
-You can see if it was create by using the command **\list**, but it is pretty much done.
+You can see if it was created by using the command **\list**, but it is pretty much done.
 
 ### Python setup
 
@@ -114,4 +114,4 @@ You should see something like this:
 
 ![running](running.png)
 
-You can start using it by adding some products and making some purchases.
+You can start using it by adding some products and purchasing something.
