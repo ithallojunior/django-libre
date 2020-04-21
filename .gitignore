@@ -14,5 +14,5 @@ Thumbs.db
 # virtualenv
 p3/
 
-#migrations
-control/migrations/
+# vscode files
+.vscode/
