@@ -16,7 +16,7 @@ orders and products if some criteria is met:
   + Orders can be only made if there are enough products to do so.
   + If an order is updated, this update results in changes on the
     number of available products. Case it is deleted, it only takes effect
-    if it has not ben sent (**"Pendente de envio"**).
+    if it has not been sent (**"Pendente de envio"**).
   
 
 ## Setup
@@ -61,13 +61,6 @@ You can see if it was created by using the command **\list**, but it is pretty m
  (p3) $ pip install -r requirements.txt
  ```
  
- If for some reason it does not work, install the libraries needed manually from teh activated
- environment by:
- 
- ``` console
- (p3) $ pip install django==2.2.5
- (p3) $ pip install psycopg2==2.8.3
- ```
 By the way, this environment can be deactivated by simple typing **deactivate**.
 
 ### Django setup
