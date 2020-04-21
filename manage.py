@@ -7,6 +7,11 @@ import sys
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'store.settings')
     try:
+        # overriding to be possible to set default port and ip
+        from django.core.management.commands.runserver import Command as runserver
+        runserver.default_addr = '127.0.0.1' # must be added to the ALLOWED_HOSTS
+        runserver.default_port = '8000'
+
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(
